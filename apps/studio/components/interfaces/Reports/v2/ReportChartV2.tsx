@@ -141,7 +141,7 @@ export const ReportChartV2 = ({
             Error loading chart data
           </p>
         ) : (
-          <div className="w-full">
+          <div className="w-full relative">
             <ComposedChart
               chartId={report.id}
               attributes={dynamicAttributes}
@@ -167,6 +167,7 @@ export const ReportChartV2 = ({
               syncId={syncId}
               sql={queryResult?.query}
               highlightActions={highlightActions}
+              showNewBadge={report.showNewBadge}
             />
           </div>
         )}
